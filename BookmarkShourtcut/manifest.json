@@ -1,0 +1,31 @@
+{
+	"name":"bookmark page",
+	"description":"shourtcut for adding a bookmark",
+	"version":"1.0",
+	"manifest_version": 2,
+
+	"browser_action":{
+		"default_icon":"bookmark.png"
+	},
+
+  "background":{
+    "scripts": ["background.js"],
+    "persistent":false
+  },
+
+  "permissions":["tabs","bookmarks"],
+
+  "commands":{
+       "tab-change": {
+            "suggested_key": {
+              "default": "Ctrl+B",
+              "mac": "Command+B"
+            },
+            "description": "Toggle feature foo",
+            "global":"true"
+          }
+  }
+}
+
+
+ 
