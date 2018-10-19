@@ -38,18 +38,10 @@ chrome.commands.onCommand.addListener(function (command){
 						}
 					}
 				});
-			/*for(var i=0;i<size;i++){
-				if(size==1){
-					console.log("nothing to do");
-					return;
-				}*/
-				//console.log(windows[i]);
 			
 		});
 	
-		/*chrome.tabs.query({active:false,currentWindow:true}, function (tabs){
-			
-		});*/
+	
 	}
 });
 
