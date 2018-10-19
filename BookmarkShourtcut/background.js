@@ -8,14 +8,17 @@ chrome.commands.onCommand.addListener(function (command){
 			currWindow.tabs.filter(function(tab){
 
 				if(tab.active==true){
-					chrome.bookmarks.create({ 'parentId':'1',
-                        'title': tab.title,
-                        'url':tab.url},
-                         function(newFolder) {
-      				});
-
+					chrome.bookmarks.search({'title':tab.title,'url':tab.url},function(result){
+						if(result.length==0){
+							chrome.bookmarks.create({ 'parentId':'1',
+                        		'title': tab.title,
+                        		'url':tab.url},
+                         		function(newFolder) {
+      						});
+						}
+					});
 				}
-				
+	
 			});
 			
 		});
